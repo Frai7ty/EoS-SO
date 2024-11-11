@@ -1,0 +1,28 @@
+namespace = f7
+
+country_event = {
+  id = f7.1
+  hide_window = yes
+
+  is_triggered_only = yes
+
+  trigger = {
+    has_origin = f7_origin_shattered_ring_mod
+  }
+
+  immediate = {
+    capital_scope = {
+      add_deposit = d_elven_planetary_forbidden_arcology 
+      add_deposit = d_elven_planetary_gardens_of_heaven
+      add_deposit = d_fallen_orbital_shipyard
+      add_deposit = d_geothermal_vent 
+      add_deposit = d_rushing_waterfalls
+      add_deposit = d_submerged_ore_veins
+      add_deposit = d_ore_rich_caverns
+      add_deposit = d_black_soil
+      add_deposit = d_great_river 
+    }
+  }
+}
+
+

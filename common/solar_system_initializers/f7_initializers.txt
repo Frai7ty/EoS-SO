@@ -1,0 +1,90 @@
+# Shattered Ring Origin
+f7_shattered_ring_start = {
+  name = "Maethrillian"
+  flags = { empire_home_system ring_world_built }
+  usage = origin
+
+  class = "sc_black_hole"
+  
+  planet = {
+    class =  "pc_black_hole"
+    orbit_distance = 0
+		orbit_angle = 1
+		size = 1
+		has_ring = no
+    init_effect = {
+      prevent_anomaly = yes
+      create_elven_nebula_magenta = yes
+			create_ambient_object = {
+				type = "elven_storm_pink"
+				location = this
+			}
+			last_created_ambient_object = {
+				set_location = {
+					target = prev
+					distance = 0
+					angle = random
+				}
+			}
+    }
+  }
+  
+  planet = {
+    class = f7_pc_utopia
+    starting_planet = yes
+    orbit_distance = 0
+    orbit_angle = 0
+    size = 50
+    has_ring = no
+    flags = { ruined_orbital_ring_planet }
+		init_effect = {			
+			prevent_anomaly = yes
+			save_event_target_as = ruined_orbital_ring_planet
+		}
+  }	
+
+  init_effect = {
+		spawn_megastructure = {
+			type = "orbital_ring_ruined"
+			planet = event_target:ruined_orbital_ring_planet
+		}
+
+		every_neighbor_system = {
+			set_star_flag = empire_cluster
+			every_neighbor_system = {
+				set_star_flag = empire_cluster
+			}
+		}
+    
+    spawn_megastructure = {
+      type = "ring_world_ruined"
+      orbit_angle = 0
+      orbit_distance = 45
+    }
+
+    spawn_megastructure = {
+      type = "ring_world_ruined"
+      orbit_angle = 180
+      orbit_distance = 45
+    }
+
+    spawn_megastructure = {
+      type = "ring_world_ruined"
+      orbit_angle = 90
+      orbit_distance = 45
+    }
+
+    spawn_megastructure = {
+      type = "ring_world_ruined"
+      orbit_angle = 270
+      orbit_distance = 45
+    }
+
+		create_nebula = {
+			name = "The Veil"
+			radius = 50
+			effect = { nebula_cloaking_effect = yes }
+		}
+	}
+}
+
