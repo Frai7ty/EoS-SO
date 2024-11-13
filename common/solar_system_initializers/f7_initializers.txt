@@ -30,11 +30,11 @@ f7_shattered_ring_start = {
   }
   
   planet = {
-    class = f7_pc_utopia
+    class = f7_pc_relic
     starting_planet = yes
     orbit_distance = 0
     orbit_angle = 0
-    size = 50
+    size = 30
     has_ring = no
     flags = { ruined_orbital_ring_planet }
 		init_effect = {			

@@ -1,0 +1,62 @@
+f7_decision_project_utopia = {
+	owned_planets_only = yes
+  icon = decision_resort_colony
+
+  enactment_time = 3600
+
+  resources = {
+		category = decisions
+		cost = {
+			influence = 200
+      energy = 10000
+			minerals = 10000
+      food = 10000
+		}
+	}
+
+	potential = {
+    is_planet_class = f7_pc_relic
+	}
+
+	allow = {
+		num_uncleared_blockers < 1
+	}
+
+	effect = {
+		# Make city-planet
+		custom_tooltip = f7_decision_utopia_project_effects
+		hidden_effect = {
+			save_deposits = yes
+			clear_deposits = yes
+			restore_saved_deposits = yes    
+			set_industrial_focus_flags = yes
+			change_pc = f7_pc_utopia 
+			relic_world_conversion_effect = {
+				DISTRICT = district_arcology_housing
+				VARIABLE = num_housing_districts
+			}
+			relic_world_conversion_effect = {
+				DISTRICT = district_arcology_arms_industry
+				VARIABLE = num_industrial_districts
+			}
+			set_ecu_industrial_districts_effect = yes
+			set_planet_entity = {
+				entity = "f7_pc_utopia_entity"
+			}
+			planet_event = { id = action.68 }
+      planet_event = { id = f7.10 }
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 100
+			exists = owner
+			OR = {
+				num_pops >= 70
+				is_capital = yes
+			}
+		}
+	}
+}

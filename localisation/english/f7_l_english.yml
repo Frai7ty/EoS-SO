@@ -7,7 +7,15 @@
   
   f7_pc_utopia: "Garden World"
   f7_pc_utopia_desc: "This world is a meticulously crafted utopia. Its immaculate vistas are combined with perfectly manicured continent-sized gardens. The sheer size leaves one to wonder how this could all be maintained." 
+  f7_pc_relic: "Relic World"
+  f7_pc_relic_desc: "A city once stretched across this entire world. Only ancient and abandoned ruins remain now, their original inhabitants long since departed."
 
-  f7_pc_utopia_upgrade: "Garden World"
-  f7_pc_utopia_upgrade_desc: " This world is a meticulously crafted utopia. Its immaculate vistas are combined with perfectly manicured continent-sized gardens. The sheer size leaves one to wonder how this could all be maintained."
+  f7_decision_project_utopia: "Project Utopia"
+  f7_decision_project_utopia_desc: "By utilizing the ancient and arcane technology found deep in this world, we will form this world into the Utopia it was ment to be." 
+  
+  f7_decision_utopia_project_effects:1 "Turns the planet into an §Y$f7_pc_utopia$§!, increasing £housing£ §Y$PLANET_HOUSING_TITLE$§!, §YResource Production§! and §YPop Growth§! and unlocking special £district£ §YArcology Districts§! at the expense of the planet's natural resources becoming §Rinaccessible§!, preventing all further construction of £district£ §YGenerator§!, §YMining§! and §YAgriculture Districts§!."
+  f7_decision_utopia_project_effects_short:2 "Increases £housing£ §Y$PLANET_HOUSING_TITLE$§!, §YResource Production§! and §YPop Growth§!\nEnables £district£ §YArcology Districts§!\nDisables construction of £district£ §YGenerator§!, §YMining§! and §YAgriculture Districts§!"
+
+  d_f7_forbidden_city: "Forbidden City"
+  d_f7_forbidden_city_desc: "An entire region set aside to manage afairs of state. Naturally these things must be done in style" 
 

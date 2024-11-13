@@ -3,8 +3,8 @@ f7_origin_shattered_ring_mod = {
 	icon = "gfx/interface/icons/origins/origins_shattered_ring.dds"
 	picture = GFX_origin_shattered_ring
 
-	starting_colony = f7_pc_utopia
-	habitability_preference = pc_shattered_ring_habitable
+	starting_colony = f7_pc_relic
+	# habitability_preference = pc_
 	initializers = { f7_shattered_ring_start }
 
 	max_once_global = yes
