@@ -1,0 +1,92 @@
+situation_f7_project_utopia = {
+  category = positive
+  start_value = 0 
+  complete_icon_frame = GFX_situation_outcome_frame_green
+	complete_icon = GFX_situation_outcome_positive
+  picture = GFX_evt_gaia
+
+  on_start = {
+
+  }
+
+  on_progress_complete = {
+		custom_tooltip = situation_unknown_outcome_approach
+		hidden_effect = { 
+      destroy_situation = this 
+      owner = {
+        every_owned_planet = {
+          limit = { has_planet_flag = project_utopia }
+          planet_event = { id = f7.20 }	
+        }
+		  }
+    }			
+  }
+
+  approach = {
+    name = "situation_utopia_approch"
+		icon = GFX_situation_approach_this_is_fine
+		icon_background = GFX_situation_approach_bg_green
+    default = yes
+    custom_toolip = { "situation_utopia_approch_tooltip" }
+  }
+
+  monthly_progress = {
+    base = 1		
+    modifier = {
+			mult = 0
+			desc = "situation_need_ring"
+      AND = {
+        situation_progress >= 120
+			  owner = {
+				  any_owned_planet = {
+					  has_planet_flag = ruined_orbital_ring_planet	
+					}				  
+			  }
+      }
+		}
+  }
+	triggered_blocked_desc = {
+		trigger = {
+      situation_progress >= 120
+			owner = {
+				any_owned_planet = {
+					has_planet_flag = ruined_orbital_ring_planet	
+				}
+			}
+		}
+		text = "situation_need_ring"
+	}
+  stages = {
+    
+    stage_1 = {
+      icon = GFX_situation_stage_1
+      icon_background = GFX_situation_stage_frame_green
+      end = 120
+    }
+
+    stage_2 = {
+      icon = GFX_situation_stage_2
+      icon_background = GFX_situation_stage_frame_green
+      end = 240
+      on_first_enter = {
+        owner = {
+          country_event = { id = f7.11 }   
+        } 
+      }
+    }
+  }
+
+  abort_trigger = {
+		OR = {
+			NOT = { exists = target.owner }
+			target.owner = { NOT = { is_same_value = root.owner } }
+		}
+	}
+    
+  on_abort = {
+		target = {
+			remove_planet_flag = project_utopia
+      remove_planet_flag = colony_event
+		}
+	}
+}

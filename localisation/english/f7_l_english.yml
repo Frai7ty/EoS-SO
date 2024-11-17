@@ -1,21 +1,58 @@
 ﻿l_english:
-  f7_origin_shattered_ring_mod: "New Begining"
-  f7_origin_shattered_ring_mod_desc: "Start in a once beautiful garden system, now but a vestige of its former self."
-  
-  f7_shattered_ring_start_NAME: "New Begining"
-  f7_shattered_ring_start_DESC: "A once beautiful garden system, now but a vestige of its former self."
-  
+  # Origin
+  origin_f7_utopia: "New Beginning"
+  origin_f7_utopia_desc: "Start in a once beautiful garden system, now but a vestige of its former self."
+
+  origin_f7_utopia_start_NAME: "New Beginning"
+  origin_f7_utopia_start_DESC: "A once beautiful garden system, now but a vestige of its former self."
+
+  START_SCREEN_UTOPIA: "Years ago we awoke from stasis pods on this word. Each of the 100,000 had no memory of who we are, where we came from, or where we are. Around us was a large facility, equipped with everything needed to house a large population, and supplies to keep us alive for some time. Outside the facility a barren landscape barely able to sustain life./n/n With no record in the computers of who we were we pushed on in order to figure out our mysteries, and to salvage this world. For the past 200 years, we have survived. In the last 50 years our population has begun to out step the facility's ability to sustain us. In the last 10 we have achieved FTL travel. We will reach out in hopes to survive, and in the hopes we can fix our world."
+
+  # Planets
   f7_pc_utopia: "Garden World"
-  f7_pc_utopia_desc: "This world is a meticulously crafted utopia. Its immaculate vistas are combined with perfectly manicured continent-sized gardens. The sheer size leaves one to wonder how this could all be maintained." 
+  f7_pc_utopia_desc: "This world is a meticulously crafted utopia. Its immaculate vistas are combined with perfectly manicured continent-sized gardens. The sheer size leaves one to wonder how this could all be maintained."
   f7_pc_relic: "Relic World"
   f7_pc_relic_desc: "A city once stretched across this entire world. Only ancient and abandoned ruins remain now, their original inhabitants long since departed."
 
+  # Decisions
   f7_decision_project_utopia: "Project Utopia"
-  f7_decision_project_utopia_desc: "By utilizing the ancient and arcane technology found deep in this world, we will form this world into the Utopia it was ment to be." 
-  
+  f7_decision_project_utopia_desc: "By utilizing the ancient and arcane technology found deep in this world, we will form this world into the Utopia it was meant to be."
+
   f7_decision_utopia_project_effects:1 "Turns the planet into an §Y$f7_pc_utopia$§!, increasing £housing£ §Y$PLANET_HOUSING_TITLE$§!, §YResource Production§! and §YPop Growth§! and unlocking special £district£ §YArcology Districts§! at the expense of the planet's natural resources becoming §Rinaccessible§!, preventing all further construction of £district£ §YGenerator§!, §YMining§! and §YAgriculture Districts§!."
   f7_decision_utopia_project_effects_short:2 "Increases £housing£ §Y$PLANET_HOUSING_TITLE$§!, §YResource Production§! and §YPop Growth§!\nEnables £district£ §YArcology Districts§!\nDisables construction of £district£ §YGenerator§!, §YMining§! and §YAgriculture Districts§!"
 
+  # Deposits
+  d_f7_caretaker_facility: "Caretaker Facility"
+  d_f7_caretaker_facility_desc: "A massive facility capeable of sustaion a large number of people for generations."
+
   d_f7_forbidden_city: "Forbidden City"
-  d_f7_forbidden_city_desc: "An entire region set aside to manage afairs of state. Naturally these things must be done in style" 
+  d_f7_forbidden_city_desc: "An entire region set aside to manage affairs of state. Naturally these things must be done in style"
+
+  d_f7_gardens_elven: "Gardens of Aru'shale"
+  d_f7_gardens_elven_desc: "These protected gardens cover much of the planets surface. There is no region that is not touched by its beauty"
+
+  d_f7_river_elven: "Rivers of Alunaria"
+  d_f7_river_elven_desc: "Much like the gardens of Aru'shale, this 'river' runs over much of the planet."
+
+  # Situations
+  situation_f7_project_utopia: "Project Utopia"
+  situation_f7_project_utopia_desc: "By utilizing the ancient and arcane technology found deep in this world, we will form this world into the Utopia it was meant to be."  
+  
+  situation_f7_project_utopia_type: "situation_f7_project_utopia_type"
+  situation_f7_project_utopia_monthly_change_tooltip: "situation_f7_project_utopia_monthly_change_tooltip"
+  situation_utopia_approch_tooltip: "situation_utopia_approch_tooltip"
+
+  situation_utopia_approch: "Step by Step"
+
+  # Events
+  f7.11.name: "Put a Ring On It"
+  f7.11.desc: "The light being put off by the damaged orbital ring above [Root.GetHomeWorldName] is simply not enough to encourage the large-scale growth of flora. In order to continue we must repair it so we can increase its output."
+  f7.11.a: "We know what to do"
+
+  f7.20.name: "Utopia Realized"
+  f7.20.desc: "After many years of hard work we have finally realized our worlds true potential. The planetary ring was restored, bathing us in its light. Our biosphere perfected, we now live in harmonious unity with our home. All that remains now is to repair the great ring. As task perhaps even greater then what we have realized today."
+  f7.20.a: "Amazing"
+
+  # Tooltips
+  situation_need_ring: "We need to restore the Orbital Ring before we can continue."
 

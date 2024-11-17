@@ -37,6 +37,7 @@ f7_pc_utopia = {
 	show_city = yes
 	carry_cap_per_free_district = @carry_cap_high
 	uses_alternative_skies_if_has_orbital_ring = yes
+	is_artificial_planet = yes
 }
 
 f7_pc_relic = {
@@ -74,6 +75,7 @@ f7_pc_relic = {
 	ideal = no
 	show_city = yes
 	uses_alternative_skies_for_moons = no
+	is_artificial_planet = yes
 
 	modifier = {
 		pop_environment_tolerance = 0.80

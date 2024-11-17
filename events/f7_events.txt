@@ -7,26 +7,89 @@ country_event = {
   is_triggered_only = yes
 
   trigger = {
-    has_origin = f7_origin_shattered_ring_mod
+    has_origin = origin_f7_utopia
   }
 
   immediate = {
     capital_scope = {
+      add_deposit = d_f7_caretaker_facility 
 			add_deposit = d_city_ruins
 			add_deposit = d_metal_boneyard
-			add_deposit = d_junk_wastes
-			add_deposit = d_junk_canals
-			add_deposit = d_junk_hollows
     }
   }
 }
 
-planet_event {
+planet_event = {
   id = f7.10
   hide_window = yes
   is_triggered_only = yes
+  
+  immediate = {
+    set_planet_flag = colony_event
+    set_planet_flag = project_utopia
+    owner = {
+      start_situation = {
+        type = situation_f7_project_utopia
+        target = root
+      }
+    }
+  }
+}
 
-  immediate = { 
+country_event = {
+  id = f7.11
+  title = "f7.11.name"
+  desc = "f7.11.desc"
+  picture = GFX_evt_atmospheric_flight
+  show_sound = event_administrative_work 
+  is_triggered_only = yes
+
+  option = {
+    name = "f7.11.a"
+    owner = {
+      add_research_option = tech_orbital_ring_tier_1
+      add_tech_progress = {
+        tech = tech_orbital_ring_tier_1
+        progress = 0.5
+      }
+    }    
+  }  
+}
+
+planet_event = {
+  id = f7.20
+  title = "f7.20.name"
+  desc = "f7.20.desc"
+  picture = GFX_evt_gaia
+  show_sound = event_celebration
+  is_triggered_only = yes
+
+  immediate = {
+		save_deposits = yes
+		clear_deposits = yes
+		restore_saved_deposits = yes    
+		set_industrial_focus_flags = yes
+		change_pc = f7_pc_utopia 
+		conversion_effect = {
+			DISTRICT = district_arcology_housing
+      VARIABLE = num_housing_districts 
+		}
+		relic_world_conversion_effect = {
+			DISTRICT = district_arcology_arms_industry
+			VARIABLE = num_industrial_districts
+		}
+		set_ecu_industrial_districts_effect = yes
+		set_planet_entity = {
+			entity = "f7_pc_utopia_entity"
+		}
+		planet_event = { id = action.68 }
+
     add_deposit = d_f7_forbidden_city
+    add_deposit = d_f7_gardens_elven 
+    add_deposit = d_f7_river_elven 
+  }
+
+  option {
+    name = "f7.20.a"
   }
 }

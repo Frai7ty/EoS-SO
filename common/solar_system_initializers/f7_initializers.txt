@@ -1,5 +1,5 @@
 # Shattered Ring Origin
-f7_shattered_ring_start = {
+origin_f7_utopia_start = {
   name = "Maethrillian"
   flags = { empire_home_system ring_world_built }
   usage = origin
@@ -47,6 +47,7 @@ f7_shattered_ring_start = {
 		spawn_megastructure = {
 			type = "orbital_ring_ruined"
 			planet = event_target:ruined_orbital_ring_planet
+  		graphical_culture = elven_01
 		}
 
 		every_neighbor_system = {

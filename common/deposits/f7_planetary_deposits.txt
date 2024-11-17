@@ -1,4 +1,21 @@
-# Impreial Deposits
+#Deposits
+d_f7_caretaker_facility = {
+  icon = d_quarantine_zone
+  is_for_colonizable = yes  
+  category = deposit_cat_rare
+  potential = { always = no }
+  
+  planet_modifier = {
+    district_generator_max = 5
+    district_mining_max = 5
+    district_farming_max = 5
+  }
+  
+  drop_weight = {
+    weight = 0
+  }
+}
+
 
 d_f7_forbidden_city = {
   is_for_colonizable = yes
@@ -180,6 +197,37 @@ d_f7_forbidden_city = {
 		}
 	}
   
+  drop_weight = {
+    weight = 0
+  }
+}
+
+d_f7_gardens_elven = {
+  is_for_colonizable = yes
+  icon = d_drow_planetary_glowing_forests
+  category = deposit_cat_rare
+  potential = { always = no }
+
+  planet_modifier = {
+    pop_citizen_happiness = 0.10
+    job_ranger_per_pop = 0.05
+	}
+
+  drop_weight = {
+    weight = 0
+  }
+}
+
+d_f7_river_elven = {
+  is_for_colonizable = yes
+  icon = d_drow_planetary_glowing_oceans
+  category = deposit_cat_rare
+  potential = { always = no }
+
+  planet_modifier = {
+           
+	}
+
   drop_weight = {
     weight = 0
   }

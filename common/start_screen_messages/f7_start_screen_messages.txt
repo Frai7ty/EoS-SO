@@ -1,0 +1,9 @@
+# Utopia
+part = {
+  location = 0
+  localization = "START_SCREEN_UTOPIA"
+
+  trigger = {
+    has_origin = origin_f7_utopia  
+  } 
+}
