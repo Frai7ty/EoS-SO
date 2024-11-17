@@ -16,14 +16,8 @@ f7_decision_project_utopia = {
 
 	potential = {
     is_planet_class = f7_pc_relic
-      has_planet_flag = project_utopia
-    }
-	}
-
-  possible = {
-    tech_climate_restoration
   }
-
+	
 	allow = {
 		num_uncleared_blockers < 1
 	}
