@@ -2,6 +2,8 @@
   # Origin
   origin_f7_utopia: "New Beginning"
   origin_f7_utopia_desc: "Start in a once beautiful garden system, now but a vestige of its former self."
+  origin_f7_utopia_effects: "§R- WARNING: Origin may start difficult due to no guartied habitable worlds!§ Start on a barren relic world surrounded by a ruined Ring World. Repair and restore your home world, and system over the course of the game to craft a utopia."
+
 
   origin_f7_utopia_start_NAME: "New Beginning"
   origin_f7_utopia_start_DESC: "A once beautiful garden system, now but a vestige of its former self."
@@ -23,13 +25,19 @@
 
   # Deposits
   d_f7_caretaker_facility: "Caretaker Facility"
-  d_f7_caretaker_facility_desc: "A massive facility capeable of sustaion a large number of people for generations."
+  d_f7_caretaker_facility_desc: "A massive facility capable of sustaining a large number of people for generations."
+
+  d_f7_climate_stablizer: "Climate Stablizer" 
+  d_f7_climate_stablizer_desc: "These massive spires keep the area around the Cartaker Facility habitable by scrubbing the atmoshphere and producing breathable air."
+  
+  d_f7_crumbling_spire: "Crumbling Climate Stablizer"
+  d_f7_crumbling_spire_desc: "This machine, once able to clean and produce air, has borken down due to disrepair. Lucky for us, the Facility has schmatics on how to repair this device."
 
   d_f7_forbidden_city: "Forbidden City"
   d_f7_forbidden_city_desc: "An entire region set aside to manage affairs of state. Naturally these things must be done in style"
 
   d_f7_gardens_elven: "Gardens of Aru'shale"
-  d_f7_gardens_elven_desc: "These protected gardens cover much of the planets surface. There is no region that is not touched by its beauty"
+  d_f7_gardens_elven_desc: "These protected gardens cover much of the planet's surface. There is no region that is not touched by its beauty"
 
   d_f7_river_elven: "Rivers of Alunaria"
   d_f7_river_elven_desc: "Much like the gardens of Aru'shale, this 'river' runs over much of the planet."
@@ -37,22 +45,31 @@
   # Situations
   situation_f7_project_utopia: "Project Utopia"
   situation_f7_project_utopia_desc: "By utilizing the ancient and arcane technology found deep in this world, we will form this world into the Utopia it was meant to be."  
-  
+
   situation_f7_project_utopia_type: "situation_f7_project_utopia_type"
   situation_f7_project_utopia_monthly_change_tooltip: "situation_f7_project_utopia_monthly_change_tooltip"
-  situation_utopia_approch_tooltip: "situation_utopia_approch_tooltip"
+  situation_utopia_approch_tooltip: "We are only doing all we can."
 
   situation_utopia_approch: "Step by Step"
 
   # Events
-  f7.11.name: "Put a Ring On It"
-  f7.11.desc: "The light being put off by the damaged orbital ring above [Root.GetHomeWorldName] is simply not enough to encourage the large-scale growth of flora. In order to continue we must repair it so we can increase its output."
-  f7.11.a: "We know what to do"
+  f7.12.name: "The Means are Green"
+  f7.12.desc: "While most of [Root.GetHomeWorldName] is still baren and cold, the majority of Continent the Cartetaker facility is on is thirving. This is thanks to the recently fixed Climate Stablizers. While the spread of their effect do seem to be slowing, it is stable. Hopefully in time we can find a way to increase their spread."
+  f7.12.a: "Tangiable Progress"
+
+  f7.13.name: "Spring Cleaning"
+  f7.13.desc: "The repaired Climate Stabalizers on [Root.GetHomeWorldName] have done all they can. In order to continue our recovery of [Root.GetHomeWorldName], we must reseach new methods of restoring our cliamte."
+  f7.13.a: "Lets get to work"
+  
+  f7.15.name: "Put a Ring On It"
+  f7.15.desc: "The light being put off by the damaged orbital ring above [Root.GetHomeWorldName] is simply not enough to encourage the large-scale growth of flora. In order to continue we must repair it so we can increase its output."
+  f7.15.a: "We know what to do"
 
   f7.20.name: "Utopia Realized"
-  f7.20.desc: "After many years of hard work we have finally realized our worlds true potential. The planetary ring was restored, bathing us in its light. Our biosphere perfected, we now live in harmonious unity with our home. All that remains now is to repair the great ring. As task perhaps even greater then what we have realized today."
+  f7.20.desc: "After many years of hard work we have finally realized our world's true potential. The planetary ring was restored, bathing us in its light. Our biosphere perfected, we now live in harmonious unity with our home. All that remains now is to repair the great ring; a task perhaps even greater than what we have realized today."
   f7.20.a: "Amazing"
 
   # Tooltips
+  situation_need_spires: "We must repair the Climate Stablizers to continue"
   situation_need_ring: "We need to restore the Orbital Ring before we can continue."
-
+  situation_need_tech_climate_restoration: "We need to research Climate Restoration to continue."

@@ -1,5 +1,55 @@
 namespace = f7
 
+#country_event = {
+#  id = f7.01
+#  hide_window = yes
+#  is_triggered_only = yes
+#  trigger = {
+#    has_origin = origin_f7_utopia
+#  }
+#
+#  immediate = {
+#    # Tag our old home planet
+#		capital_scope = {
+#			save_event_target_as = previous_home_planet
+#			solar_system = { save_event_target_as = previous_home_system }
+#			if = {
+#				limit = { exists = sector }
+#				sector.sector_capital = {
+#					leader = {
+#						unassign_leader = this
+#						save_event_target_as = f7_gov
+#					}
+#				}
+#			}
+#			else = {
+#				root = {
+#					random_owned_leader = {
+#						limit = { leader_class = official }
+#						save_event_target_as = f7_gov
+#					}
+#				}
+#			}
+#		}
+#    no_scope = {
+#      spawn_system = {
+#        min_distance >= 0.0001  
+#        max_distance <= 0.0001	
+#        min_orientation_angle = 44  
+#        max_orientation_angle = 46  
+#        initializer = origin_f7_utopia_start 
+#        authorize_spawn_on_galactic_core = yes 
+#        hyperlane = no 
+#      }
+#      last_created_system = { set_name = event_target:previous_home_system }
+#    }
+#    event_target:giga_core_system = {
+#      set_star_flag = empire_cluster
+#			set_star_flag = empire_home_system
+#    }
+#  }
+#}
+
 country_event = {
   id = f7.1
   hide_window = yes
@@ -12,9 +62,13 @@ country_event = {
 
   immediate = {
     capital_scope = {
-      add_deposit = d_f7_caretaker_facility 
-			add_deposit = d_city_ruins
-			add_deposit = d_metal_boneyard
+      clear_deposits = yes
+      add_deposit = d_f7_caretaker_facility
+      add_deposit = d_f7_climate_stablizer 
+      add_deposit = d_f7_crumbling_spire 
+      add_deposit = d_f7_crumbling_spire 
+      add_deposit = d_f7_crumbling_spire 
+      planet_event = { id = f7.10 }
     }
   }
 }
@@ -36,21 +90,62 @@ planet_event = {
   }
 }
 
+planet_event = {
+  id = f7.12
+  title = "f7.12.name"
+  desc = "f7.12.desc"
+  picture = GFX_evt_continental
+  show_sound = event_celebration
+  is_triggered_only = yes
+
+  immediate = {
+    set_planet_entity = {
+      picture = pc_continental 
+    }
+  }
+
+  option = {
+    name = "f7.12.a"
+  }
+}
+
 country_event = {
-  id = f7.11
-  title = "f7.11.name"
-  desc = "f7.11.desc"
+  id = f7.13
+  title = "f7.13.name"
+  desc = "f7.13.desc"
   picture = GFX_evt_atmospheric_flight
   show_sound = event_administrative_work 
   is_triggered_only = yes
 
   option = {
-    name = "f7.11.a"
+    name = "f7.13.a"
+    owner = {
+      add_research_option = tech_climate_restoration      
+      add_tech_progress = {
+        tech =  tech_climate_restoration        
+        progress = 0.4
+      }
+    }    
+  }  
+}
+
+
+
+country_event = {
+  id = f7.15
+  title = "f7.15.name"
+  desc = "f7.15.desc"
+  picture = GFX_evt_atmospheric_flight
+  show_sound = event_administrative_work 
+  is_triggered_only = yes
+
+  option = {
+    name = "f7.15.a"
     owner = {
       add_research_option = tech_orbital_ring_tier_1
       add_tech_progress = {
         tech = tech_orbital_ring_tier_1
-        progress = 0.5
+        progress = 0.4
       }
     }    
   }  
@@ -70,20 +165,24 @@ planet_event = {
 		restore_saved_deposits = yes    
 		set_industrial_focus_flags = yes
 		change_pc = f7_pc_utopia 
-		conversion_effect = {
+		
+    relic_world_conversion_effect = {
 			DISTRICT = district_arcology_housing
       VARIABLE = num_housing_districts 
 		}
-		relic_world_conversion_effect = {
+		
+    relic_world_conversion_effect = {
 			DISTRICT = district_arcology_arms_industry
 			VARIABLE = num_industrial_districts
 		}
-		set_ecu_industrial_districts_effect = yes
-		set_planet_entity = {
+		
+    set_ecu_industrial_districts_effect = yes
+		
+    set_planet_entity = {
 			entity = "f7_pc_utopia_entity"
 		}
-		planet_event = { id = action.68 }
 
+    planet_event = { id = action.68 }
     add_deposit = d_f7_forbidden_city
     add_deposit = d_f7_gardens_elven 
     add_deposit = d_f7_river_elven 

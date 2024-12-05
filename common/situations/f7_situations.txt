@@ -24,19 +24,45 @@ situation_f7_project_utopia = {
 
   approach = {
     name = "situation_utopia_approch"
-		icon = GFX_situation_approach_this_is_fine
+		icon = GFX_situation_approach_scales
 		icon_background = GFX_situation_approach_bg_green
     default = yes
-    custom_toolip = { "situation_utopia_approch_tooltip" }
+    on_select = {
+      custom_tooltip = situation_utopia_approch_tooltip
+    }
   }
 
   monthly_progress = {
-    base = 1		
+    base = 1 
+    modifier = {
+      mult = 0
+      desc = "situation_need_spires"
+      AND = {
+        situation_progress < 120
+        owner = {
+          any_owned_planet = {
+            has_deposit = d_f7_crumbling_spire
+          }
+        }
+      }
+    }
+    modifier = {
+      mult = 0
+      desc = "situation_need_tech_climate_restoration"
+      AND = {
+        situation_progress >= 240
+        owner = {
+          NOT = {
+            has_technology = tech_climate_restoration
+          }
+        }
+      }
+    }
     modifier = {
 			mult = 0
 			desc = "situation_need_ring"
       AND = {
-        situation_progress >= 120
+        situation_progress >= 480
 			  owner = {
 				  any_owned_planet = {
 					  has_planet_flag = ruined_orbital_ring_planet	
@@ -45,9 +71,32 @@ situation_f7_project_utopia = {
       }
 		}
   }
+  
 	triggered_blocked_desc = {
 		trigger = {
-      situation_progress >= 120
+      situation_progress < 120
+			owner = {
+				any_owned_planet = {
+					has_planet_flag = d_f7_crumbling_spire
+				}
+			}
+		}
+    text = "situation_need_spires"
+	}
+
+  triggered_blocked_desc = {
+		trigger = {
+      situation_progress >= 240
+			owner = {
+          has_technology = tech_climate_restoration
+			}
+		}
+		text = "situation_need_tech_climate_restoration"
+	}
+
+	triggered_blocked_desc = {
+		trigger = {
+      situation_progress >= 480
 			owner = {
 				any_owned_planet = {
 					has_planet_flag = ruined_orbital_ring_planet	
@@ -56,13 +105,13 @@ situation_f7_project_utopia = {
 		}
 		text = "situation_need_ring"
 	}
+
   stages = {
-    
-    stage_1 = {
+    stage_1 = {      
       icon = GFX_situation_stage_1
       icon_background = GFX_situation_stage_frame_green
       end = 120
-    }
+    }  
 
     stage_2 = {
       icon = GFX_situation_stage_2
@@ -70,7 +119,38 @@ situation_f7_project_utopia = {
       end = 240
       on_first_enter = {
         owner = {
-          country_event = { id = f7.11 }   
+          every_owned_planet = {
+            limit = { has_planet_flag = project_utopia }
+            planet_event = { id = f7.12 }
+          }
+		    }
+      }
+    }
+
+    stage_3 = {
+      icon = GFX_situation_stage_3
+      icon_background = GFX_situation_stage_frame_green
+      end = 360
+      on_first_enter = {
+        owner = {
+          country_event = { id = f7.13 }
+        }
+      }
+    }
+
+    stage_4 = {
+      icon = GFX_situation_stage_4
+      icon_background = GFX_situation_stage_frame_green
+      end = 480      
+    }
+    
+    stage_5 = {
+      icon = GFX_situation_stage_5
+      icon_background = GFX_situation_stage_frame_green
+      end = 600
+      on_first_enter = {
+        owner = {
+          country_event = { id = f7.15 }   
         } 
       }
     }

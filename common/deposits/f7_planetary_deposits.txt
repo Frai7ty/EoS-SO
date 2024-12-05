@@ -1,21 +1,67 @@
-#Deposits
+# Blockers
+d_f7_crumbling_spire = {
+	time = 360
+	icon = d_broken_spire
+
+	is_for_colonizable = yes
+	category = deposit_cat_rare_blocker
+
+	potential = { always = no }
+  
+  use_weights_for_blocker_swap_types = no
+
+	blocker_swap_types = {
+    d_f7_climate_stablizer 
+	}
+
+	resources = {
+		category = deposit_blockers
+		cost = {
+			energy = 100
+      minerals = 250
+		}
+	}
+}
+
+# Deposits
 d_f7_caretaker_facility = {
   icon = d_quarantine_zone
   is_for_colonizable = yes  
   category = deposit_cat_rare
   potential = { always = no }
   
-  planet_modifier = {
-    district_generator_max = 5
-    district_mining_max = 5
-    district_farming_max = 5
+  resources = {
+		category = planet_deposits
+		produces = {
+			energy = 10
+      minerals = 10
+      food = 10
+      consumer_goods = 5
+		}    
   }
-  
+
   drop_weight = {
     weight = 0
   }
 }
 
+d_f7_climate_stablizer = {
+  icon = d_reactor
+  is_for_colonizable = yes  
+  category = deposit_cat_rare
+  potential = { always = no }
+  
+  planet_modifier = {
+    pop_environment_tolerance = 0.25
+    district_generator_max = 2
+    district_mining_max = 2
+    district_farming_max = 2
+  }
+  
+  drop_weight = {
+    weight = 0
+  }
+} 
 
 d_f7_forbidden_city = {
   is_for_colonizable = yes

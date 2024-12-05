@@ -23,7 +23,7 @@ origin_f7_utopia = {
     }
 	}
 
-	description = "origin_tooltip_shattered_ring_effects"
+	description = "origin_f7_utopia_effects"
 
 	flags = { custom_start_screen }
 
